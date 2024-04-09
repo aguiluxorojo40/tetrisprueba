@@ -1,0 +1,35 @@
+<!DOCTYPE html>A
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Canvas para el juego de Tetris -->
+    <canvas id="tetris" width="240" height="400"></canvas>
+    <!-- División para mostrar la puntuación -->
+    <div id="score">Score: 0</div>
+
+    <!-- Controles del juego -->
+    <div id="controls">
+        <div class="control-row">
+            <button id="rotateLeftButton">↺</button>
+            <button id="upButton">↑</button>
+            <button id="rotateRightButton">↻</button>
+        </div>
+        <div class="control-row">
+            <button id="leftButton">←</button>
+            <button id="downButton">↓</button>
+            <button id="rightButton">→</button>
+        </div>
+    </div>
+
+    <!-- Botón de inicio del juego -->
+    <button id="startButton">Start</button>
+
+    <!-- Enlace al script de JavaScript que controla la lógica del Tetris -->
+    <script src="scripts/tetris.js"></script>
+</body>
+</html>

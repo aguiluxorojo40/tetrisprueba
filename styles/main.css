@@ -1,0 +1,161 @@
+/* Establece el estilo base para el cuerpo de la página */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #2D2D2D;
+    color: #CCCCCC;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  /* Estilos para el contenedor principal del juego */
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #1E1E1E;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  }
+  
+  /* Mejoras visuales para el tablero */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(20, 30px);
+    gap: 2px;
+  }
+  
+  .cell {
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Transiciones suaves para cambios de color */
+  .cell.transition {
+    transition: transform 0.2s ease;
+  }
+  
+  /* Diferentes colores para cada tipo de pieza */
+  .cell.I { background-color: #00FFFF; }
+  .cell.J { background-color: #0000FF; }
+  .cell.L { background-color: #FFA500; }
+  .cell.O { background-color: #FFFF00; }
+  .cell.S { background-color: #00FF00; }
+  .cell.T { background-color: #800080; }
+  .cell.Z { background-color: #FF0000; }
+  
+  /* Estilo para la próxima pieza y puntuación */
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .next-piece, .scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 50px;
+    margin: 10px 0;
+    padding: 10px;
+    background: #252525;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  /* Botones y controles */
+  .button, .control-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .button:hover, .control-btn:active {
+    background-color: #0056b3;
+  }
+  
+  /* Mejoras generales en la UI */
+  .game-info, .controls {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    color: #FFF;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .game-container {
+      flex-direction: column;
+    }
+  
+    .board {
+      grid-template-columns: repeat(10, 20px);
+      grid-template-rows: repeat(20, 20px);
+    }
+  
+    .cell {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .info-section {
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+    }
+    
+    /* Contenedor para los controles en pantalla */
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      max-width: 300px;
+      margin-top: 20px;
+    }
+  
+    /* Ajuste para que los controles solo se muestren en dispositivos móviles */
+    @media (min-width: 600px) {
+      .controls {
+        display: none;
+      }
+    }
+  }
+/* Estilo para el contenedor del tablero */
+.board-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo para las celdas del tablero */
+.board .cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+}
+
+/* Ajuste para el tamaño del tablero */
+.board {
+    width: 320px;
+    height: 480px;
+    grid-template-columns: repeat(10, 32px); /* Adjusted column size */
+    grid-template-rows: repeat(16, 32px); /* Adjusted row size */
+}
